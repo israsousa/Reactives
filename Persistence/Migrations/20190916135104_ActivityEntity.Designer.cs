@@ -9,8 +9,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190914235006_ActivityEntityAdded")]
-    partial class ActivityEntityAdded
+    [Migration("20190916135104_ActivityEntity")]
+    partial class ActivityEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("City");
 
-                    b.Property<string>("Description");
+                    b.Property<DateTime>("Date");
 
-                    
+                    b.Property<string>("Description");
 
                     b.Property<string>("Title");
 
